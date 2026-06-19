@@ -1,0 +1,41 @@
+/* src/input.css */
+@import "tailwindcss";
+
+@custom-variant dark (&:where(.dark, .dark *));
+
+/* 1. Konfigurasi Tema (Pengganti tailwind.config.js) */
+@theme {
+  --color-darkBg: #121212;
+  --color-darkCard: #1E1E1E;
+  --color-darkTextMain: #F3F4F6;
+  --color-darkTextSec: #9CA3AF;
+}
+
+/* 2. Kelas Kustom untuk HTML yang lebih bersih */
+@layer components {
+  /* --- Tombol Utama & Outline --- */
+  .btn-primary {
+    @apply px-7 py-3 bg-blue-600 hover:bg-blue-700 text-white font-medium rounded-lg transition-colors shadow-lg shadow-blue-500/30;
+  }
+  .btn-outline {
+    @apply px-7 py-3 border border-gray-300 dark:border-gray-700 hover:border-blue-500 dark:hover:border-blue-500 font-medium rounded-lg transition-colors;
+  }
+
+  /* --- Kartu Proyek (Projects) --- */
+  .project-card {
+    @apply bg-white dark:bg-darkCard rounded-xl p-6 shadow-sm border border-gray-100 dark:border-gray-800 flex flex-col h-full hover:border-blue-500/50 transition-colors;
+  }
+  .project-tag {
+    @apply bg-gray-100 dark:bg-gray-800/80 px-3 py-1.5 rounded-md border border-gray-200 dark:border-gray-700 text-[11px] font-semibold text-gray-600 dark:text-gray-300 uppercase tracking-wider;
+  }
+
+  /* --- Kotak Keahlian (Skills) --- */
+  .skill-card {
+    @apply flex flex-col items-center justify-center w-20 h-20 bg-white dark:bg-darkCard rounded-lg shadow-sm hover:-translate-y-1 hover:shadow-md transition-all border border-gray-100 dark:border-gray-800 cursor-pointer;
+  }
+
+  /* --- Ikon Sosial Media (Footer) --- */
+  .social-icon {
+    @apply flex items-center justify-center w-10 h-10 rounded-full bg-gray-100 dark:bg-gray-800 text-gray-600 dark:text-gray-300 transition-all;
+  }
+}

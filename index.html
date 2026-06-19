@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html lang="en" class="dark scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio | Immanuel Justin Elnathan</title>
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <link rel="stylesheet" href="./src/output.css">
+
+    <style>
+        /* Smooth transition for theme toggle */
+        body { transition: background-color 0.3s ease, color 0.3s ease; }
+        
+        /* Adjust scroll margin for sticky navbar */
+        section { scroll-margin-top: 80px; }
+    </style>
+</head>
+<body class="bg-gray-50 text-gray-900 dark:bg-darkBg dark:text-darkTextMain font-sans antialiased min-h-screen flex flex-col">
+
+    <!-- Sticky Navbar -->
+    <nav class="sticky top-0 z-50 w-full bg-gray-50/80 dark:bg-darkBg/80 backdrop-blur-md border-b border-gray-200 dark:border-gray-800">
+        <div class="max-w-5xl mx-auto p-6 flex items-center justify-between">
+            <div class="flex items-center gap-4">
+                <span class="font-bold text-xl tracking-wide hover:text-blue-500 transition-colors cursor-pointer"><a href="#home">Immanuel Justin.</a></span>
+            </div>
+            
+            <!-- Desktop Navigation -->
+            <div class="hidden md:flex items-center gap-6">
+                <!-- Navigation Links -->
+                <div class="flex gap-5 text-sm font-medium">
+                    <a href="#home" class="hover:text-blue-500 transition-colors">Home</a>
+                    <a href="#about" class="hover:text-blue-500 transition-colors">About</a>
+                    <a href="#skills" class="hover:text-blue-500 transition-colors">Skills</a>
+                    <a href="#projects" class="hover:text-blue-500 transition-colors">Projects</a>
+                    <a href="#contact" class="hover:text-blue-500 transition-colors">Contact</a>
+                </div>
+                <!-- Theme Toggle Button (Desktop) -->
+                <button class="theme-toggle p-2.5 rounded-lg bg-gray-200 dark:bg-[#27272A] hover:bg-gray-300 dark:hover:bg-gray-700 transition-colors" aria-label="Toggle Dark Mode">
+                    <i class="fa-solid fa-moon text-gray-700 block dark:hidden"></i>
+                    <i class="fa-solid fa-sun text-yellow-400 hidden dark:block"></i>
+                </button>
+            </div>
+
+            <!-- Hamburger Button (Mobile Only) -->
+            <button id="mobile-menu-btn" class="md:hidden p-2 text-gray-700 dark:text-gray-300 focus:outline-none">
+                <i class="fa-solid fa-bars text-2xl"></i>
+            </button>
+        </div>
+
+        <!-- Mobile Menu Dropdown -->
+        <div id="mobile-menu" class="hidden md:hidden bg-white dark:bg-darkCard border-b border-gray-200 dark:border-gray-800 shadow-lg absolute w-full left-0">
+            <div class="flex flex-col px-6 py-4 space-y-4 text-base font-medium">
+                <a href="#home" class="mobile-link hover:text-blue-500 transition-colors">Home</a>
+                <a href="#about" class="mobile-link hover:text-blue-500 transition-colors">About</a>
+                <a href="#skills" class="mobile-link hover:text-blue-500 transition-colors">Skills</a>
+                <a href="#projects" class="mobile-link hover:text-blue-500 transition-colors">Projects</a>
+                <a href="#contact" class="mobile-link hover:text-blue-500 transition-colors">Contact</a>
+                
+                <!-- Theme Toggle Button (Mobile) -->
+                <div class="pt-4 border-t border-gray-200 dark:border-gray-700 flex items-center justify-between">
+                    <span class="text-gray-600 dark:text-gray-300">Switch Theme</span>
+                    <button class="theme-toggle p-2.5 rounded-lg bg-gray-100 dark:bg-gray-800 hover:bg-gray-200 dark:hover:bg-gray-700 transition-colors" aria-label="Toggle Dark Mode">
+                        <i class="fa-solid fa-moon text-gray-700 dark:hidden"></i>
+                        <i class="fa-solid fa-sun text-yellow-400 hidden dark:inline-block"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <main class="grow max-w-5xl mx-auto w-full px-6">
+        
+        <section id="home" class="min-h-[calc(100vh-88px)] flex flex-col justify-center text-center md:text-left py-12">
+            <div class="max-w-3xl">
+                <p class="text-blue-500 font-semibold tracking-wide mb-3 uppercase text-sm">Welcome to my portfolio</p>
+                <h1 class="text-5xl md:text-7xl font-extrabold mb-6 leading-tight">Hi, I'm <span class="text-blue-500">Justin</span>.</h1>
+                <p class="text-xl md:text-2xl text-gray-600 dark:text-darkTextSec font-light mb-10">
+                    I build modern, functional, and user-friendly digital experiences.
+                </p>
+                <div class="flex justify-center md:justify-start gap-4">
+                    <a href="#projects" class="btn-primary">
+                        View Projects
+                    </a>
+                    <a href="#about" class="btn-outline">
+                        More About Me
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <section id="about" class="pt-12 pb-24 border-t border-gray-200 dark:border-gray-800">
+            <div class="max-w-3xl mb-20">
+                <h2 class="text-3xl font-bold mb-6">About Me</h2>
+                <div class="space-y-4 text-gray-600 dark:text-darkTextSec text-lg leading-relaxed">
+                    <p>
+                        I am an enthusiastic software developer passionate about building robust web applications and efficient software systems. I enjoy solving complex logical problems and turning ideas into functional digital realities.
+                    </p>
+                    <p>
+                        Currently, I am focusing on expanding my knowledge in modern web technologies, database management, and creating seamless user experiences. I believe that good code is not just about making things work, but making things work efficiently and beautifully.
+                    </p>
+                </div>
+            </div>
+
+            <div>
+                <div class="text-center md:text-left mb-8">
+                    <h3 class="text-2xl font-bold mb-2">Certificates & Awards</h3>
+                    <p class="text-gray-600 dark:text-darkTextSec">My recent achievements and completed courses.</p>
+                </div>
+                
+                <div class="grid sm:grid-cols-2 md:grid-cols-3 gap-6">
+                    <div class="bg-white dark:bg-darkCard rounded-xl overflow-hidden shadow-sm border border-gray-100 dark:border-gray-800 hover:border-blue-500/50 transition-colors">
+                        <div class="w-full h-48 bg-gray-200 dark:bg-gray-800 flex flex-col items-center justify-center text-gray-400 dark:text-gray-600">
+                            <i class="fa-solid fa-image text-3xl mb-2"></i>
+                            <span class="text-xs uppercase tracking-widest">Image Placeholder</span>
+                        </div>
+                        <div class="p-5">
+                            <h3 class="font-bold text-lg mb-1">Web Development Bootcamp</h3>
+                            <p class="text-sm text-gray-500 dark:text-darkTextSec">Issued by: Tech Academy</p>
+                        </div>
+                    </div>
+
+                    <div class="bg-white dark:bg-darkCard rounded-xl overflow-hidden shadow-sm border border-gray-100 dark:border-gray-800 hover:border-blue-500/50 transition-colors">
+                        <div class="w-full h-48 bg-gray-200 dark:bg-gray-800 flex flex-col items-center justify-center text-gray-400 dark:text-gray-600">
+                            <i class="fa-solid fa-image text-3xl mb-2"></i>
+                            <span class="text-xs uppercase tracking-widest">Image Placeholder</span>
+                        </div>
+                        <div class="p-5">
+                            <h3 class="font-bold text-lg mb-1">Backend with Laravel</h3>
+                            <p class="text-sm text-gray-500 dark:text-darkTextSec">Issued by: Code Institute</p>
+                        </div>
+                    </div>
+                    
+                    <div class="bg-white dark:bg-darkCard rounded-xl overflow-hidden shadow-sm border border-gray-100 dark:border-gray-800 hover:border-blue-500/50 transition-colors">
+                        <div class="w-full h-48 bg-gray-200 dark:bg-gray-800 flex flex-col items-center justify-center text-gray-400 dark:text-gray-600">
+                            <i class="fa-solid fa-image text-3xl mb-2"></i>
+                            <span class="text-xs uppercase tracking-widest">Image Placeholder</span>
+                        </div>
+                        <div class="p-5">
+                            <h3 class="font-bold text-lg mb-1">C# & Windows Forms</h3>
+                            <p class="text-sm text-gray-500 dark:text-darkTextSec">Issued by: Microsoft Learn</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="skills" class="pt-12 pb-24 border-t border-gray-200 dark:border-gray-800">
+            <div class="text-center md:text-left mb-10">
+                <h2 class="text-3xl font-bold mb-2">Tech Stack</h2>
+                <p class="text-gray-600 dark:text-darkTextSec">Technologies and tools I work with.</p>
+            </div>
+            
+            <div class="flex flex-wrap justify-center md:justify-start gap-4">
+                <a href="https://developer.mozilla.org/en-US/docs/Web/HTML" target="_blank" rel="noopener noreferrer" class="skill-card hover:border-orange-500 dark:hover:border-orange-500">
+                    <i class="fa-brands fa-html5 text-2xl text-orange-500 mb-1.5"></i>
+                    <span class="text-[11px] font-semibold tracking-wide">HTML</span>
+                </a>
+                
+                <a href="https://developer.mozilla.org/en-US/docs/Web/CSS" target="_blank" rel="noopener noreferrer" class="skill-card hover:border-blue-500 dark:hover:border-blue-500">
+                    <i class="fa-brands fa-css3-alt text-2xl text-blue-500 mb-1.5"></i>
+                    <span class="text-[11px] font-semibold tracking-wide">CSS</span>
+                </a>
+                
+                <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript" target="_blank" rel="noopener noreferrer" class="skill-card hover:border-yellow-400 dark:hover:border-yellow-400">
+                    <i class="fa-brands fa-js text-2xl text-yellow-400 mb-1.5"></i>
+                    <span class="text-[11px] font-semibold tracking-wide">JavaScript</span>
+                </a>
+                
+                <a href="https://www.php.net/manual/en/intro-whatis.php" target="_blank" rel="noopener noreferrer" class="skill-card hover:border-indigo-400 dark:hover:border-indigo-400">
+                    <i class="fa-brands fa-php text-2xl text-indigo-400 mb-1.5"></i>
+                    <span class="text-[11px] font-semibold tracking-wide">PHP</span>
+                </a>
+                
+                <a href="https://laravel.com/docs" target="_blank" rel="noopener noreferrer" class="skill-card hover:border-red-500 dark:hover:border-red-500">
+                    <i class="fa-brands fa-laravel text-2xl text-red-500 mb-1.5"></i>
+                    <span class="text-[11px] font-semibold tracking-wide">Laravel</span>
+                </a>
+                
+                <a href="https://learn.microsoft.com/en-us/dotnet/csharp/" target="_blank" rel="noopener noreferrer" class="skill-card hover:border-purple-500 dark:hover:border-purple-500">
+                    <i class="fa-solid fa-code text-2xl text-purple-500 mb-1.5"></i>
+                    <span class="text-[11px] font-semibold tracking-wide">C#</span>
+                </a>
+                
+                <a href="https://dev.mysql.com/doc/" target="_blank" rel="noopener noreferrer" class="skill-card hover:border-blue-400 dark:hover:border-blue-400">
+                    <i class="fa-solid fa-database text-2xl text-blue-400 mb-1.5"></i>
+                    <span class="text-[11px] font-semibold tracking-wide">MySQL</span>
+                </a>
+                
+                <a href="https://tailwindcss.com/docs" target="_blank" rel="noopener noreferrer" class="skill-card hover:border-teal-400 dark:hover:border-teal-400">
+                    <i class="fa-solid fa-wind text-2xl text-teal-400 mb-1.5"></i>
+                    <span class="text-[10px] font-semibold tracking-wide">Tailwind</span>
+                </a>
+                
+                <a href="https://getbootstrap.com/docs/" target="_blank" rel="noopener noreferrer" class="skill-card hover:border-purple-600 dark:hover:border-purple-600">
+                    <i class="fa-brands fa-bootstrap text-2xl text-purple-600 mb-1.5"></i>
+                    <span class="text-[10px] font-semibold tracking-wide">Bootstrap</span>
+                </a>
+                
+                <a href="https://git-scm.com/doc" target="_blank" rel="noopener noreferrer" class="skill-card hover:border-orange-600 dark:hover:border-orange-600">
+                    <i class="fa-brands fa-git-alt text-2xl text-orange-600 mb-1.5"></i>
+                    <span class="text-[11px] font-semibold tracking-wide">Git</span>
+                </a>
+            </div>
+        </section>
+
+        <section id="projects" class="pt-12 pb-24 border-t border-gray-200 dark:border-gray-800">
+            <div class="text-center md:text-left mb-10">
+                <h2 class="text-3xl font-bold mb-2">Featured Projects</h2>
+                <p class="text-gray-600 dark:text-darkTextSec">Some of the software and systems I have built.</p>
+            </div>
+            
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+                <div class="project-card group">
+                    <h3 class="text-xl font-bold mb-3 group-hover:text-blue-500 transition-colors">Location-Based Attendance System</h3>
+                    <p class="text-sm text-gray-600 dark:text-darkTextSec mb-6 grow leading-relaxed">
+                        A web-based attendance application with location validation features and automated WhatsApp notification integration.
+                    </p>
+                    <div class="flex flex-wrap gap-2 text-[11px] font-semibold text-gray-600 dark:text-gray-300 uppercase tracking-wider">
+                        <span class="bg-gray-100 dark:bg-gray-800/80 px-3 py-1.5 rounded-md border border-gray-200 dark:border-gray-700">PHP</span>
+                        <span class="bg-gray-100 dark:bg-gray-800/80 px-3 py-1.5 rounded-md border border-gray-200 dark:border-gray-700">MySQL</span>
+                        <span class="bg-gray-100 dark:bg-gray-800/80 px-3 py-1.5 rounded-md border border-gray-200 dark:border-gray-700">AJAX</span>
+                    </div>
+                </div>
+
+                <div class="project-card group">
+                    <h3 class="text-xl font-bold mb-3 group-hover:text-blue-500 transition-colors">Grade Management System</h3>
+                    <p class="text-sm text-gray-600 dark:text-darkTextSec mb-6 grow leading-relaxed">
+                        A structured system to calculate final grades based on assignment weights (30%), Midterms (30%), and Finals (40%) fully integrated with a database.
+                    </p>
+                    <div class="flex flex-wrap gap-2 text-[11px] font-semibold text-gray-600 dark:text-gray-300 uppercase tracking-wider">
+                        <span class="bg-gray-100 dark:bg-gray-800/80 px-3 py-1.5 rounded-md border border-gray-200 dark:border-gray-700">Database</span>
+                        <span class="bg-gray-100 dark:bg-gray-800/80 px-3 py-1.5 rounded-md border border-gray-200 dark:border-gray-700">Logic</span>
+                    </div>
+                </div>
+
+                <div class="project-card group">
+                    <h3 class="text-xl font-bold mb-3 group-hover:text-blue-500 transition-colors">Electricity Bill Calculator</h3>
+                    <p class="text-sm text-gray-600 dark:text-darkTextSec mb-6 grow leading-relaxed">
+                        A Windows Form application to estimate daily electricity usage costs based on lamp wattage and duration of use.
+                    </p>
+                    <div class="flex flex-wrap gap-2 text-[11px] font-semibold text-gray-600 dark:text-gray-300 uppercase tracking-wider">
+                        <span class="bg-gray-100 dark:bg-gray-800/80 px-3 py-1.5 rounded-md border border-gray-200 dark:border-gray-700">C#</span>
+                        <span class="bg-gray-100 dark:bg-gray-800/80 px-3 py-1.5 rounded-md border border-gray-200 dark:border-gray-700">Windows Forms</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="contact" class="min-h-[calc(100vh-88px)] flex flex-col justify-center items-center text-center pt-12 pb-24 border-t border-gray-200 dark:border-gray-800">
+            <div class="max-w-2xl px-6">
+                <p class="text-blue-500 font-semibold tracking-wide mb-3 uppercase text-sm">What's Next?</p>
+                <h2 class="text-4xl md:text-6xl font-extrabold mb-6">Let's Build Something Awesome Together.</h2>
+                <p class="text-lg md:text-xl text-gray-600 dark:text-darkTextSec font-light mb-10 leading-relaxed">
+                    I'm currently open for new opportunities and collaborations. Whether you have a project in mind, a question, or just want to say hi, I'll try my best to get back to you!
+                </p>
+                <a href="https://mail.google.com/mail/?view=cm&fs=1&to=immanueljustin201@gmail.com" target="_blank" class="inline-flex items-center justify-center gap-3 px-8 py-4 bg-blue-600 hover:bg-blue-700 text-white font-semibold rounded-full transition-all shadow-lg shadow-blue-500/30 hover:-translate-y-1 text-lg">
+                    <i class="fa-solid fa-envelope"></i> Message Me
+                </a>
+            </div>
+        </section>
+
+    </main>
+
+    <footer class="bg-white dark:bg-darkCard border-t border-gray-200 dark:border-gray-800 py-10 mt-auto">
+        <div class="max-w-5xl mx-auto px-6 flex flex-col md:flex-row justify-between items-center gap-6">
+            <div class="text-center md:text-left">
+                <p class="text-sm text-gray-500 dark:text-darkTextSec">© 2026 Immanuel Justin. All rights reserved.</p>
+            </div>
+            
+            <div class="flex gap-5">
+                <a href="https://github.com/immanueljustinn" target="_blank" class="social-icon hover:bg-gray-200 dark:hover:bg-gray-700 hover:text-gray-900 dark:hover:text-white">
+                    <i class="fa-brands fa-github text-xl"></i>
+                </a>
+                <a href="https://www.instagram.com/immanueljstnn_/" class="social-icon hover:bg-pink-100 dark:hover:bg-pink-900/30 hover:text-pink-600 dark:hover:text-pink-400">
+                    <i class="fa-brands fa-instagram text-xl"></i>
+                </a>
+                <a href="https://mail.google.com/mail/?view=cm&fs=1&to=immanueljustin201@gmail.com" target="_blank" class="social-icon hover:bg-blue-100 dark:hover:bg-blue-900/30 hover:text-blue-600 dark:hover:text-blue-400">
+                    <i class="fa-solid fa-envelope text-xl"></i>
+                </a>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // --- Theme Toggle Logic ---
+        const themeToggles = document.querySelectorAll('.theme-toggle');
+        
+        themeToggles.forEach(toggleBtn => {
+            toggleBtn.addEventListener('click', function() {
+                // Tailwind handles the icon switching automatically via dark:hidden classes
+                document.documentElement.classList.toggle('dark');
+            });
+        });
+
+        // --- Mobile Menu Logic ---
+        const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+        const menuIcon = mobileMenuBtn.querySelector('i');
+        const mobileLinks = document.querySelectorAll('.mobile-link');
+
+        // Toggle mobile menu visibility and icon
+        mobileMenuBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+            
+            if (mobileMenu.classList.contains('hidden')) {
+                menuIcon.classList.remove('fa-xmark');
+                menuIcon.classList.add('fa-bars');
+            } else {
+                menuIcon.classList.remove('fa-bars');
+                menuIcon.classList.add('fa-xmark');
+            }
+        });
+
+        // Close mobile menu automatically when a link is clicked
+        mobileLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMenu.classList.add('hidden');
+                menuIcon.classList.remove('fa-xmark');
+                menuIcon.classList.add('fa-bars');
+            });
+        });
+    </script>
+</body>
+</html>
