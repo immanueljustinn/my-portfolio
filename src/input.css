@@ -9,6 +9,14 @@
   --color-darkCard: #1E1E1E;
   --color-darkTextMain: #F3F4F6;
   --color-darkTextSec: #9CA3AF;
+
+  /* --- Tambahkan Animasi Carousel --- */
+  --animate-marquee: marquee 15s linear infinite;
+  
+  @keyframes marquee {
+    /* Geser ke kiri sejauh 100% lebarnya ditambah 1rem (kompensasi dari gap-4) */
+    to { transform: translateX(calc(-100% - 1rem)); }
+  }
 }
 
 /* 2. Kelas Kustom untuk HTML yang lebih bersih */
@@ -31,7 +39,11 @@
 
   /* --- Kotak Keahlian (Skills) --- */
   .skill-card {
-    @apply flex flex-col items-center justify-center w-20 h-20 bg-white dark:bg-darkCard rounded-lg shadow-sm hover:-translate-y-1 hover:shadow-md transition-all border border-gray-100 dark:border-gray-800 cursor-pointer;
+   /* min-w-80px dan shrink-0 memastikan ukurannya tidak gepeng saat masuk ke carousel */
+    @apply flex flex-col items-center justify-center min-w-20 h-20 bg-white dark:bg-darkCard rounded-lg shadow-sm border border-gray-100 dark:border-gray-800 cursor-pointer shrink-0 transition-all duration-300 relative z-0;
+
+    /* Hover di HP: naik sedikit. Hover di Laptop (md): membesar, tidak naik, dan maju ke depan (z-10) */
+    @apply hover:-translate-y-1 md:hover:translate-y-0 md:hover:scale-125 hover:shadow-lg hover:z-10;
   }
 
   /* --- Ikon Sosial Media (Footer) --- */

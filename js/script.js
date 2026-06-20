@@ -66,7 +66,7 @@ if (certModal && modalImg && certImages.length > 0) {
 const observerOptions = {
     root: null,
     rootMargin: '0px',
-    threshold: 0.15 // Animasi jalan saat 15% elemen sudah masuk layar
+    threshold: 0.20 // Animasi jalan saat 15% elemen sudah masuk layar
 };
 
 const observer = new IntersectionObserver((entries) => {
