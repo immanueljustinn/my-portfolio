@@ -47,3 +47,18 @@
     @apply bg-gray-100 dark:bg-gray-800/80 px-3 py-1.5 rounded-md border border-gray-200 dark:border-gray-700 text-[11px] font-semibold text-gray-600 dark:text-gray-300 uppercase tracking-wider;
   }
 }
+
+@layer utilities {
+  /* Kondisi awal: sembunyi dan sedikit turun ke bawah */
+  .scroll-hidden {
+    opacity: 0;
+    transform: translateY(40px);
+    transition: all 0.8s cubic-bezier(0.5, 0, 0, 1); /* Efek smooth */
+  }
+
+  /* Kondisi akhir: muncul penuh dan kembali ke posisi asli */
+  .scroll-show {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
